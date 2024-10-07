@@ -1369,7 +1369,8 @@ async function run(_local, _lib, _branch) {
       {name: 'fortress', label: '🏯 fortress'},
       {name: 'garden', label: '🌱 garden'},
       {name: 'harmonic', label: '🎵 harmonic'},
-      {name: 'ionic', label: '🏛️ ionic'}
+      {name: 'ionic', label: '🏛️ ionic'},
+      {name: 'jetty', label: '🪵 jetty'}
     ];
 
     for (const collection of collections) {
@@ -14068,8 +14069,8 @@ class OidcClient {
             const res = yield httpclient
                 .getJson(id_token_url)
                 .catch(error => {
-                throw new Error(`Failed to get ID Token. \n 
-        Error Code : ${error.statusCode}\n 
+                throw new Error(`Failed to get ID Token. \n
+        Error Code : ${error.statusCode}\n
         Error Message: ${error.result.message}`);
             });
             const id_token = (_a = res.result) === null || _a === void 0 ? void 0 : _a.value;

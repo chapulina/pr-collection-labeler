@@ -37,7 +37,8 @@ async function run(_local, _lib, _branch) {
       {name: 'fortress', label: '🏯 fortress'},
       {name: 'garden', label: '🌱 garden'},
       {name: 'harmonic', label: '🎵 harmonic'},
-      {name: 'ionic', label: '🏛️ ionic'}
+      {name: 'ionic', label: '🏛️ ionic'},
+      {name: 'jetty', label: '🪵 jetty'}
     ];
 
     for (const collection of collections) {

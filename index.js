@@ -35,7 +35,6 @@ async function run(_local, _lib, _branch) {
     const collections = [
       {name: 'citadel', label: '🏰 citadel'},
       {name: 'fortress', label: '🏯 fortress'},
-      {name: 'garden', label: '🌱 garden'},
       {name: 'harmonic', label: '🎵 harmonic'},
       {name: 'ionic', label: '🏛️ ionic'},
       {name: 'jetty', label: '🪵 jetty'}
@@ -68,7 +67,6 @@ async function run(_local, _lib, _branch) {
     }
 
     const classicVersions = [
-      {name: 'gazebo9', label: 'Gazebo 9️'},
       {name: 'gazebo11', label: 'Gazebo 1️1️'},
     ];
 

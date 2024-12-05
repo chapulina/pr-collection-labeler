@@ -27,7 +27,7 @@ async function run(_local, _lib, _branch) {
     }
     const gh = new github.GitHub(token);
 
-    const owner = 'ignition-tooling';
+    const owner = 'gazebo-tooling';
     const repo = 'gazebodistro';
 
     let labels = [];
@@ -35,7 +35,6 @@ async function run(_local, _lib, _branch) {
     const collections = [
       {name: 'citadel', label: '🏰 citadel'},
       {name: 'fortress', label: '🏯 fortress'},
-      {name: 'garden', label: '🌱 garden'},
       {name: 'harmonic', label: '🎵 harmonic'},
       {name: 'ionic', label: '🏛️ ionic'},
       {name: 'jetty', label: '🪵 jetty'}
@@ -68,7 +67,6 @@ async function run(_local, _lib, _branch) {
     }
 
     const classicVersions = [
-      {name: 'gazebo9', label: 'Gazebo 9️'},
       {name: 'gazebo11', label: 'Gazebo 1️1️'},
     ];
 
@@ -114,4 +112,4 @@ async function run(_local, _lib, _branch) {
 run()
 
 // Uncomment and change input to test locally
-// run(true, "gz-launch", "main")
+// run(true, "gz-sim", "gz-sim8")

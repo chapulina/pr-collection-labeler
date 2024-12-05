@@ -46,7 +46,7 @@ async function run(_local, _lib, _branch) {
 
       const collectionRes = await gh.repos.getContents({owner, repo, path});
       const collectionContent = Buffer.from(collectionRes.data.content, 'base64').toString();
-      const collectionYaml = yaml.safeLoad(collectionContent);
+      const collectionYaml = yaml.load(collectionContent);
 
       let lib = collectionYaml.repositories[library];
 
@@ -76,7 +76,7 @@ async function run(_local, _lib, _branch) {
 
       const versionRes = await gh.repos.getContents({owner, repo, path});
       const versionContent = Buffer.from(versionRes.data.content, 'base64').toString();
-      const versionYaml = yaml.safeLoad(versionContent);
+      const versionYaml = yaml.load(versionContent);
 
       let lib = versionYaml.repositories[library];
 

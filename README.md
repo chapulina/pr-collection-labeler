@@ -1,18 +1,18 @@
 
 <p align="center">
-  <a href="https://github.com/ignition-tooling/pr-collection-labeler/actions"><img alt="javscript-action status" src="https://github.com/ignition-tooling/pr-collection-labeler/workflows/units-test/badge.svg"></a>
+  <a href="https://github.com/gazebo-tooling/pr-collection-labeler/actions"><img alt="javscript-action status" src="https://github.com/gazebo-tooling/pr-collection-labeler/workflows/units-test/badge.svg"></a>
 </p>
 
 # PR collection labeler
 
-Adds labels to pull requests according to the target Ignition distribution.
+Adds labels to pull requests according to the target Gazebo distribution.
 
-It uses [gazebodistro](https://github.com/ignition-tooling/gazebodistro) to
+It uses [gazebodistro](https://github.com/gazebo-tooling/gazebodistro) to
 find the mapping between branches and collections.
 
 ## Usage
 
-Add the following file to an Ignition repository:
+Add the following file to an Gazebo repository:
 `.github/workflows/pr-collection-labeler.yml`
 
 ```
@@ -26,7 +26,7 @@ jobs:
     steps:
     - name: Add collection labels
       if: github.event.action == 'opened'
-      uses: ignition-tooling/pr-collection-labeler@v1
+      uses: gazebo-tooling/pr-collection-labeler@v1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 ```

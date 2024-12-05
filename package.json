@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ignition-tooling/pr-collection-labeler.git"
+    "url": "git+https://github.com/gazebo-tooling/pr-collection-labeler.git"
   },
   "keywords": [
     "GitHub",
     "Actions",
     "JavaScript",
-    "Ignition"
+    "Gazebo"
   ],
   "author": "GitHub",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ignition-tooling/pr-collection-labeler/issues"
+    "url": "https://github.com/gazebo-tooling/pr-collection-labeler/issues"
   },
-  "homepage": "https://github.com/ignition-tooling/pr-collection-labeler#readme",
+  "homepage": "https://github.com/gazebo-tooling/pr-collection-labeler#readme",
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^2.1.1",

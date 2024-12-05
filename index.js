@@ -27,7 +27,7 @@ async function run(_local, _lib, _branch) {
     }
     const gh = new github.GitHub(token);
 
-    const owner = 'ignition-tooling';
+    const owner = 'gazebo-tooling';
     const repo = 'gazebodistro';
 
     let labels = [];
@@ -114,4 +114,4 @@ async function run(_local, _lib, _branch) {
 run()
 
 // Uncomment and change input to test locally
-// run(true, "gz-launch", "main")
+// run(true, "gz-sim", "gz-sim8")

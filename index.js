@@ -25,7 +25,7 @@ async function run(_local, _lib, _branch) {
       core.debug('Failed to get token');
       return;
     }
-    const gh = new github.GitHub(token);
+    const gh = github.getOctokit(token);
 
     const owner = 'gazebo-tooling';
     const repo = 'gazebodistro';
@@ -44,7 +44,7 @@ async function run(_local, _lib, _branch) {
 
       const path = 'collection-' + collection.name + '.yaml';
 
-      const collectionRes = await gh.repos.getContents({owner, repo, path});
+      const collectionRes = await gh.rest.repos.getContent({owner, repo, path});
       const collectionContent = Buffer.from(collectionRes.data.content, 'base64').toString();
       const collectionYaml = yaml.load(collectionContent);
 
@@ -74,7 +74,7 @@ async function run(_local, _lib, _branch) {
 
       const path = version.name + '.yaml';
 
-      const versionRes = await gh.repos.getContents({owner, repo, path});
+      const versionRes = await gh.rest.repos.getContent({owner, repo, path});
       const versionContent = Buffer.from(versionRes.data.content, 'base64').toString();
       const versionYaml = yaml.load(versionContent);
 

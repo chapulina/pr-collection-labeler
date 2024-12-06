@@ -36020,7 +36020,7 @@ async function run(_local, _lib, _branch) {
     if (!_local && labels.length > 0) {
       const prNumber = github.context.payload.pull_request.number;
       core.debug(`Adding labels: [${labels}] to PR [${prNumber}]`);
-      gh.issues.addLabels(
+      gh.rest.issues.addLabels(
         Object.assign({issue_number: prNumber, labels: labels },
         github.context.repo));
     }

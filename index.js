@@ -53,8 +53,8 @@ async function run(_local, _lib, _branch) {
       if (lib == undefined)
       {
         // TODO(chapulina) Remove this after gz rename is over
-        library = library.replace('gz', 'ign');
-        lib = collectionYaml.repositories[library];
+        const ign_library = library.replace('gz', 'ign');
+        lib = collectionYaml.repositories[ign_library];
         if (lib == undefined)
         {
           continue;

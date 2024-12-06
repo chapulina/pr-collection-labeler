@@ -98,9 +98,7 @@ async function run(_local, _lib, _branch) {
 
     if (!_local && labels.length > 0) {
       const prNumber = github.context.payload.pull_request.number;
-      core.info(`::debug:: Adding labels: [${labels}] to PR [${prNumber}]`);
-      core.info(`Adding labels: [${labels}] to PR [${prNumber}]`);
-      core.notice(`Adding labels: [${labels}] to PR [${prNumber}]`);
+      core.debug(`Adding labels: [${labels}] to PR [${prNumber}]`);
       gh.rest.issues.addLabels(
         Object.assign({issue_number: prNumber, labels: labels },
         github.context.repo));

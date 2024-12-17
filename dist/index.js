@@ -35954,7 +35954,6 @@ async function run(_local, _lib, _branch) {
     let labels = [];
 
     const collections = [
-      {name: 'citadel', label: '🏰 citadel'},
       {name: 'fortress', label: '🏯 fortress'},
       {name: 'harmonic', label: '🎵 harmonic'},
       {name: 'ionic', label: '🏛️ ionic'},
